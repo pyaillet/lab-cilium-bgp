@@ -100,6 +100,7 @@ topology:
     server0:
       kind: linux
       image: nicolaka/netshoot:latest
+      # Must use the container full name while https://github.com/srl-labs/containerlab/issues/1731 is not resolved
       network-mode: container:clab-bgp-cplane-demo-control-plane
       exec:
       # Cilium currently doesn't support BGP Unnumbered
